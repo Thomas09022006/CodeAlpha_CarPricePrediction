@@ -1,34 +1,39 @@
-# 🚗 Car Price Prediction - CodeAlpha Internship
+# 🚗 Car Price Prediction using Machine Learning
 
-## 📌 Project Overview
+## 📌 Internship Project - CodeAlpha
 
-This project predicts the **selling price of cars** using Machine Learning techniques.
-It was developed as part of the **CodeAlpha Data Science Internship**.
-
-The model analyzes various car features such as fuel type, transmission, kilometers driven, and car age to estimate the price.
+This project is developed as part of the **CodeAlpha Data Science Internship**.
+It predicts the **selling price of used cars** using Machine Learning techniques.
 
 ---
 
 ## 🎯 Objective
 
-* Build a regression model to predict car prices
-* Perform data preprocessing and feature engineering
+* Predict car prices based on features like:
+
+  * Year
+  * Present Price
+  * Kilometers Driven
+  * Fuel Type
+  * Transmission
+* Apply regression algorithms for prediction
 * Evaluate model performance
-* Visualize insights from data
 
 ---
 
 ## 📊 Dataset
 
-The dataset contains information about used cars, including:
+The dataset contains details of used cars including:
 
-* Year of purchase
-* Present price
-* Kilometers driven
-* Fuel type
-* Seller type
+* Car_Name
+* Year
+* Selling_Price
+* Present_Price
+* Kms_Driven
+* Fuel_Type
+* Seller_Type
 * Transmission
-* Number of previous owners
+* Owner
 
 ---
 
@@ -43,11 +48,13 @@ The dataset contains information about used cars, including:
 
 ---
 
-## 🔄 Workflow
+## 🔄 Project Workflow
 
 1. Data Collection
 2. Data Cleaning
-3. Feature Engineering (Car Age calculation)
+3. Feature Engineering
+
+   * Created **Car Age** feature
 4. Encoding categorical variables
 5. Train-Test Split
 6. Model Training (Random Forest Regressor)
@@ -58,31 +65,31 @@ The dataset contains information about used cars, including:
 
 ## 🤖 Machine Learning Model
 
-* **Algorithm Used:** Random Forest Regressor
+* **Random Forest Regressor**
 * Handles non-linear relationships effectively
 * Provides feature importance
 
 ---
 
-## 📈 Results
+## 📈 Model Performance
 
-* Achieved high accuracy with strong R² score
-* Low Mean Absolute Error (MAE)
-* Model performs well on unseen data
+* R² Score: ~0.90+
+* MAE: Low error
+* Good prediction accuracy on unseen data
 
 ---
 
 ## 📊 Visualizations
 
 * Correlation Heatmap
-* Actual vs Predicted Price Graph
-* Feature Importance Plot
+* Actual vs Predicted Graph
+* Feature Importance Graph
 
 ---
 
-## 💾 Model Saving
+## 💾 Model Saving & Loading
 
-The trained model is saved using **Pickle**:
+### Save Model
 
 ```python
 import pickle
@@ -90,19 +97,18 @@ with open("car_price_model.pkl", "wb") as f:
     pickle.dump(model, f)
 ```
 
+### Load Model
+
+```python
+with open("car_price_model.pkl", "rb") as f:
+    model = pickle.load(f)
+```
+
 ---
 
-## 🔮 Future Improvements
+## 🚀 How to Run
 
-* Add more features (brand value, engine capacity, etc.)
-* Deploy as a web application (Streamlit/Flask)
-* Hyperparameter tuning for better accuracy
-
----
-
-## 🚀 How to Run the Project
-
-1. Clone the repository:
+1. Clone repository:
 
 ```bash
 git clone https://github.com/Thomas09022006/CodeAlpha_CarPricePrediction.git
@@ -114,7 +120,7 @@ git clone https://github.com/Thomas09022006/CodeAlpha_CarPricePrediction.git
 pip install pandas numpy matplotlib seaborn scikit-learn
 ```
 
-3. Run the notebook or script:
+3. Run Jupyter Notebook:
 
 ```bash
 jupyter notebook
@@ -122,13 +128,32 @@ jupyter notebook
 
 ---
 
-## 🙌 Acknowledgement
+## 📌 Key Features
 
-This project was completed as part of the **CodeAlpha Internship Program**, providing hands-on experience in data science and machine learning.
+✔ Data preprocessing
+✔ Feature engineering
+✔ Model training & evaluation
+✔ Visualization
+✔ Model saving
 
 ---
 
-## 📌 Author
+## 🔮 Future Improvements
+
+* Hyperparameter tuning
+* Add more features (engine, brand value)
+* Deploy using Streamlit/Flask
+* Build real-time prediction system
+
+---
+
+## 🙌 Acknowledgement
+
+This project was completed under the **CodeAlpha Internship Program**, providing hands-on experience in Machine Learning and Data Science.
+
+---
+
+## 👤 Author
 
 **Sanjay Thomas**
 Data Science Intern
